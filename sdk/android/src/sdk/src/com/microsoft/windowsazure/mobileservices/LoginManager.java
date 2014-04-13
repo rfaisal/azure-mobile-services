@@ -62,7 +62,7 @@ class LoginManager {
 	/**
 	 * Login process initial URL
 	 */
-	private static final String START_URL = "login/";
+	private static final String START_URL = "api/login/";
 
 	/**
 	 * Login process final URL
@@ -444,7 +444,7 @@ class LoginManager {
 		final ServiceFilterRequest request = new ServiceFilterRequestImpl(
 				new HttpPost(url), mClient.getAndroidHttpClientFactory());
 		request.addHeader(HTTP.CONTENT_TYPE, MobileServiceConnection.JSON_CONTENTTYPE);
-		
+
 		try {
 			// Set request's content with the token
 			request.setContent(token);

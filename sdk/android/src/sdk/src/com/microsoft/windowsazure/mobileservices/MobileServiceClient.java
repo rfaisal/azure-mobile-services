@@ -278,7 +278,7 @@ public class MobileServiceClient {
 		if (oAuthToken == null) {
 			throw new IllegalArgumentException("oAuthToken cannot be null");
 		}
-
+		oAuthToken.addProperty("device", "android");
 		login(provider, oAuthToken.toString(), callback);
 	}
 
